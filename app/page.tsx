@@ -1,3 +1,5 @@
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 import GetStarted from "@/sections/GetStarted";
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
@@ -8,19 +10,17 @@ import WhyTailorMyJob from "@/sections/WhyTailorMyJob";
 export default function Home() {
     return (
         <main>
-            {/* Hero Section */}
             <Hero />
-            {/* How it works */}
+
             <HowItWorks />
-            {/* Why TailorMyJob */}
+
             <WhyTailorMyJob />
-            {/* Showcase Results / Examples */}
+
             <TryItNow />
-            {/* Testimonials or Social Proof */}
+
             <Testimonials />
-            {/* Call to Action / Get Started */}
+
             <GetStarted />
-            {/* Footer */}
         </main>
     );
 }
