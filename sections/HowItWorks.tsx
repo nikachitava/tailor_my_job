@@ -1,27 +1,6 @@
 import React from "react";
-import { Sparkles, FileText, Wand2 } from "lucide-react";
 import HowItWorkCard from "@/components/HowItWorkCard";
-
-const steps = [
-    {
-        id: 1,
-        icon: <FileText className="w-8 h-8 text-primary" />,
-        title: "1. Paste the Job Description",
-        desc: "Copy and paste any job description from LinkedIn or other platforms.",
-    },
-    {
-        id: 2,
-        icon: <Sparkles className="w-8 h-8 text-primary" />,
-        title: "2. Add Your Info or Resume",
-        desc: "Upload your CV or describe your background — we’ll tailor it for you.",
-    },
-    {
-        id: 3,
-        icon: <Wand2 className="w-8 h-8 text-primary" />,
-        title: "3. Get a Customized CV & Cover Letter",
-        desc: "Our AI instantly generates tailored documents you can download or edit.",
-    },
-];
+import { steps } from "@/data/constants";
 
 const HowItWorks = () => {
     return (

@@ -1,34 +1,7 @@
 import React from "react";
 
-import { Rocket, Brain, Clock, Star } from "lucide-react";
 import FeaturesCard from "@/components/FeaturesCard";
-
-const features = [
-    {
-        id: 1,
-        icon: <Star className="w-6 h-6 text-[var(--primary)]" />,
-        title: "Tailored To Any Role",
-        desc: "Whether it’s Software Engineer or UX Designer, your documents match perfectly.",
-    },
-    {
-        id: 2,
-        icon: <Brain className="w-6 h-6 text-[var(--primary)]" />,
-        title: "Powered by OpenAI",
-        desc: "Smart language models ensure your profile aligns with the job tone and keywords.",
-    },
-    {
-        id: 3,
-        icon: <Clock className="w-6 h-6 text-[var(--primary)]" />,
-        title: "Fast & Effortless",
-        desc: "Generate a job-ready CV & cover letter in seconds — no more blank-page anxiety.",
-    },
-    {
-        id: 4,
-        icon: <Rocket className="w-6 h-6 text-[var(--primary)]" />,
-        title: "Built for Job Seekers",
-        desc: "No clutter, no fluff — just a streamlined experience designed to help you succeed.",
-    },
-];
+import { features } from "@/data/constants";
 
 const WhyTailorMyJob = () => {
     return (
