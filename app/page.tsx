@@ -1,5 +1,3 @@
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import GetStarted from "@/sections/GetStarted";
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
