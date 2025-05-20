@@ -1,5 +1,6 @@
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
+import WhyTailorMyJob from "@/sections/WhyTailorMyJob";
 
 export default function Home() {
     return (
@@ -9,6 +10,7 @@ export default function Home() {
             {/* How it works */}
             <HowItWorks />
             {/* Why TailorMyJob */}
+            <WhyTailorMyJob />
             {/* Showcase Results / Examples */}
             {/* Testimonials or Social Proof */}
             {/* Call to Action / Get Started */}
