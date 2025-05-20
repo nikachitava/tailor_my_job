@@ -1,3 +1,4 @@
+import GetStarted from "@/sections/GetStarted";
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
 import Testimonials from "@/sections/Testimonials";
@@ -18,6 +19,7 @@ export default function Home() {
             {/* Testimonials or Social Proof */}
             <Testimonials />
             {/* Call to Action / Get Started */}
+            <GetStarted />
             {/* Footer */}
         </main>
     );
