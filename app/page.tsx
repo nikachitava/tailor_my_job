@@ -1,5 +1,6 @@
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
+import Testimonials from "@/sections/Testimonials";
 import TryItNow from "@/sections/TryItNow";
 import WhyTailorMyJob from "@/sections/WhyTailorMyJob";
 
@@ -15,6 +16,7 @@ export default function Home() {
             {/* Showcase Results / Examples */}
             <TryItNow />
             {/* Testimonials or Social Proof */}
+            <Testimonials />
             {/* Call to Action / Get Started */}
             {/* Footer */}
         </main>
