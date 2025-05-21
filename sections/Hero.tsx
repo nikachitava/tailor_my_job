@@ -5,12 +5,15 @@ import React from "react";
 import heroAnimation from "../public/assets/heroAnimation.json";
 import dynamic from "next/dynamic";
 import FadeInWhenVisible from "@/components/FadeInWhenVisible";
+import { useRouter } from "next/navigation";
 
 const Lottie = dynamic(() => import("lottie-react"), {
     ssr: false,
 });
 
 const Hero = () => {
+    const router = useRouter();
+
     return (
         <FadeInWhenVisible>
             <section className="bg-background text-foreground py-20 px-4 md:px-10">
@@ -38,7 +41,7 @@ const Hero = () => {
                             <CustomButton
                                 title="See How It Works"
                                 onClick={() => {
-                                    console.log("clicked");
+                                    router.push("how-it-works");
                                 }}
                                 className="order border-input-border text-foreground px-6 py-3 rounded-xl font-medium hover:bg-[var(--accent)] hover:text-white transition"
                             />

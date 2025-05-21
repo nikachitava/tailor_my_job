@@ -5,7 +5,10 @@ import React from "react";
 const GetStarted = () => {
     return (
         <FadeInWhenVisible>
-            <section className="relative py-24 px-6 flex items-center justify-center overflow-hidden">
+            <section
+                id="get-started"
+                className="relative py-24 px-6 flex items-center justify-center overflow-hidden"
+            >
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0d0d0d] via-[#1a1a1a] to-[#0d0d0d] opacity-90"></div>
                 <div className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-[#9333ea] blur-[120px] rounded-full opacity-20 animate-pulse"></div>
                 <div className="absolute -bottom-24 -right-24 w-[300px] h-[300px] bg-[#22d3ee] blur-[100px] rounded-full opacity-20 animate-pulse"></div>

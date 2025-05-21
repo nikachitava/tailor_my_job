@@ -6,7 +6,10 @@ import FadeInWhenVisible from "@/components/FadeInWhenVisible";
 const HowItWorks = () => {
     return (
         <FadeInWhenVisible delay={0.1}>
-            <section className="bg-background text-foreground py-20 px-4 md:px-10">
+            <section
+                id="how-it-works"
+                className="bg-background text-foreground py-20 px-4 md:px-10"
+            >
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">
                         How It Works
