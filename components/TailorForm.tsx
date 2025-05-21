@@ -14,9 +14,7 @@ const TailorForm = () => {
     const {
         register,
         handleSubmit,
-        control,
-        setValue,
-        formState: { errors, isSubmitting },
+        formState: { errors },
     } = useForm<FormData>({
         defaultValues: {
             jobDescription: "",
@@ -29,6 +27,7 @@ const TailorForm = () => {
     const [tailoredResume, setTailoredResume] = useState("");
 
     const [loading, setLoading] = useState(false);
+    console.log(loading);
 
     const handlePdfUpload = async (fileList: FileList | null) => {
         if (!fileList || fileList.length === 0) return;
@@ -71,6 +70,7 @@ const TailorForm = () => {
             }
         } catch (error) {
             alert("Failed to connect to server.");
+            console.log(error);
         } finally {
             setLoading(false);
         }

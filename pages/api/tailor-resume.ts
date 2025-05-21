@@ -52,7 +52,7 @@ export default async function handler(
             completion.choices[0].message.content?.trim() ?? "";
 
         res.status(200).json({ tailoredResume });
-    } catch (error: any) {
+    } catch (error) {
         console.error("OpenAI API error:", error);
         res.status(500).json({ error: "Failed to generate tailored resume" });
     }
