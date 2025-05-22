@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
+import { login, logout } from "@/actions/auth";
+import { useSession } from "next-auth/react";
+import AuthButton from "./AuthButton";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -22,6 +25,7 @@ const NavBar = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
     return (
         <header
             className={clsx(
@@ -53,12 +57,15 @@ const NavBar = () => {
 
                 {/* CTA */}
                 <div className="hidden md:block">
-                    <Link
-                        href="/get-started"
-                        className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
-                    >
-                        Try Now
-                    </Link>
+                    <div className="flex gap-2">
+                        <Link
+                            href="/get-started"
+                            className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
+                        >
+                            Try Now
+                        </Link>
+                        <AuthButton />
+                    </div>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -93,6 +100,7 @@ const NavBar = () => {
                             >
                                 Try Now
                             </Link>
+                            <AuthButton />
                         </li>
                     </ul>
                 </div>
