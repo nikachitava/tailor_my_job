@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
-import { useSession } from "next-auth/react";
 import AuthButton from "./AuthButton";
 
 const navLinks = [
@@ -15,7 +14,6 @@ const navLinks = [
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const { data: session } = useSession();
 
     return (
         <header
