@@ -1,18 +1,23 @@
 "use client";
 
 import React from "react";
-import { useSession } from "next-auth/react";
-import { login, logout } from "@/actions/auth";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 const AuthButton = () => {
     const { data: session } = useSession();
 
-    console.log("session: ", session);
+    const handleLogout = () => {
+        signOut();
+    };
+
+    const handleLogin = () => {
+        signIn("google", { redirectTo: "/" }, { prompt: "select_account" });
+    };
 
     if (session?.user) {
         return (
             <button
-                onClick={() => logout()}
+                onClick={handleLogout}
                 className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
             >
                 Log Out
@@ -22,7 +27,7 @@ const AuthButton = () => {
 
     return (
         <button
-            onClick={() => login()}
+            onClick={handleLogin}
             className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
         >
             Login
