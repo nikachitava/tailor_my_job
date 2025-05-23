@@ -1,11 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
-import { login, logout } from "@/actions/auth";
-import { useSession } from "next-auth/react";
 import AuthButton from "./AuthButton";
 
 const navLinks = [
@@ -15,24 +13,12 @@ const navLinks = [
 ];
 
 const NavBar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <header
             className={clsx(
-                "fixed top-0 w-full z-50 transition-all duration-300",
-                isScrolled
-                    ? "bg-background/90 backdrop-blur border-b border-white/10 shadow-sm"
-                    : "bg-transparent"
+                "fixed top-0 w-full z-50 transition-all duration-300 bg-background/90 backdrop-blur"
             )}
         >
             <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
