@@ -27,7 +27,6 @@ const TailorForm = () => {
     const [tailoredResume, setTailoredResume] = useState("");
 
     const [loading, setLoading] = useState(false);
-    console.log(loading);
 
     const handlePdfUpload = async (fileList: FileList | null) => {
         if (!fileList || fileList.length === 0) return;
@@ -183,12 +182,50 @@ const TailorForm = () => {
                         </button>
                     </div>
                 </form>
+                {loading && (
+                    <div className="mt-8 flex flex-col items-center justify-center gap-4 text-yellow-800 dark:text-yellow-200">
+                        <svg
+                            className="animate-spin h-8 w-8 text-yellow-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                        >
+                            <circle
+                                className="opacity-25"
+                                cx="12"
+                                cy="12"
+                                r="10"
+                                stroke="currentColor"
+                                strokeWidth="4"
+                            />
+                            <path
+                                className="opacity-75"
+                                fill="currentColor"
+                                d="M4 12a8 8 0 018-8v8z"
+                            />
+                        </svg>
+                        <p className="text-lg font-medium">
+                            Generating your tailored resume…
+                        </p>
+                    </div>
+                )}
                 {tailoredResume && (
-                    <div className="mt-8 p-6 bg-gray-50 dark:bg-[#222] rounded-xl whitespace-pre-wrap text-gray-900 dark:text-gray-100">
-                        <h3 className="text-xl font-semibold mb-4">
-                            Your Tailored Resume
-                        </h3>
-                        <pre>{tailoredResume}</pre>
+                    <div className="mt-8 p-6 bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-400 dark:border-yellow-600 rounded-2xl shadow-md relative">
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-200">
+                                🎯 AI-Generated Tailored Resume
+                            </h3>
+                        </div>
+
+                        <div className="whitespace-pre-wrap text-gray-800 dark:text-gray-100 text-base leading-relaxed">
+                            {tailoredResume}
+                        </div>
+
+                        <p className="mt-4 text-sm italic text-yellow-700 dark:text-yellow-300">
+                            ⚠️ This resume was generated based on the uploaded
+                            content and job description. Review and edit before
+                            using it officially.
+                        </p>
                     </div>
                 )}
             </div>

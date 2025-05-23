@@ -2,9 +2,13 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import type { ChatCompletionMessageParam } from "openai/resources/chat/completions";
 
-
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: process.env.OPENROUTER_API_KEY,
+    baseURL: "https://openrouter.ai/api/v1",
+    defaultHeaders: {
+        "HTTP-Referer": "http://localhost:3000",
+        "X-Title": "Resume Tailor App",
+    },
 });
 
 type Data = {
@@ -39,7 +43,7 @@ export default async function handler(
         ];
 
         const completion = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: "mistralai/devstral-small:free",
             messages,
             max_tokens: 1500,
             temperature: 0.7,
