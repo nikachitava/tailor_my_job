@@ -33,9 +33,7 @@ const Hero = () => {
                         <div className="mt-8 flex justify-center md:justify-start gap-4">
                             <CustomButton
                                 title="Get Started"
-                                onClick={() => {
-                                    console.log("clicked");
-                                }}
+                                onClick={() => router.push("/tailor")}
                                 className="bg-primary hover:bg-accent text-white px-6 py-3 rounded-xl font-medium transition"
                             />
                             <CustomButton
