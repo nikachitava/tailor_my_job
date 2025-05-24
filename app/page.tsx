@@ -2,7 +2,6 @@ import GetStarted from "@/sections/GetStarted";
 import Hero from "@/sections/Hero";
 import HowItWorks from "@/sections/HowItWorks";
 import Testimonials from "@/sections/Testimonials";
-import TryItNow from "@/sections/TryItNow";
 import WhyTailorMyJob from "@/sections/WhyTailorMyJob";
 
 export default function Home() {
@@ -13,8 +12,6 @@ export default function Home() {
             <HowItWorks />
 
             <WhyTailorMyJob />
-
-            <TryItNow />
 
             <Testimonials />
 
