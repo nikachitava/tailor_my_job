@@ -45,7 +45,7 @@ const NavBar = () => {
                 <div className="hidden md:block">
                     <div className="flex gap-2">
                         <Link
-                            href="/get-started"
+                            href="/tailor"
                             className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
                         >
                             Try Now
