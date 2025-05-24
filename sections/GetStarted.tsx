@@ -23,7 +23,7 @@ const GetStarted = () => {
                         needed.
                     </p>
                     <Link
-                        href="/get-started"
+                        href="/tailor"
                         className="inline-block bg-gradient-to-r from-[#9333ea] to-[#22d3ee] hover:from-[#7e22ce] hover:to-[#0ea5e9] text-white font-medium px-7 py-3 rounded-full text-lg shadow-lg transition-all duration-300"
                     >
                         Get Started Free
