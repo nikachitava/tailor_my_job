@@ -86,6 +86,8 @@ const NavBar = () => {
                             >
                                 Try Now
                             </Link>
+                        </li>
+                        <li>
                             <AuthButton />
                         </li>
                     </ul>

@@ -18,7 +18,7 @@ const AuthButton = () => {
         return (
             <button
                 onClick={handleLogout}
-                className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
+                className="w-full md:w-auto px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
             >
                 Log Out
             </button>
@@ -28,7 +28,7 @@ const AuthButton = () => {
     return (
         <button
             onClick={handleLogin}
-            className="px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
+            className="w-full md:w-auto px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-accent transition"
         >
             Login
         </button>
